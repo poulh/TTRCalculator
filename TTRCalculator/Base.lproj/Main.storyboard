@@ -1,24 +1,254 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TTRCalculator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="RpV-Lm-5Uz">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8BK-y9-kAS">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="135.5"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="Stt-G3-rNn">
+                                                <rect key="frame" x="20" y="0.0" width="374" height="135.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Points" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3gv-2S-nN0">
+                                                        <rect key="frame" x="0.0" y="0.0" width="186.5" height="135.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                                        <color key="textColor" systemColor="systemGray2Color"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jJC-Cg-182">
+                                                        <rect key="frame" x="187.5" y="0.0" width="186.5" height="135.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                                        <color key="textColor" systemColor="systemGray2Color"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="Stt-G3-rNn" firstAttribute="leading" secondItem="8BK-y9-kAS" secondAttribute="leading" constant="20" symbolic="YES" id="4JW-Mj-VNO"/>
+                                            <constraint firstItem="Stt-G3-rNn" firstAttribute="top" secondItem="8BK-y9-kAS" secondAttribute="top" id="qw9-V9-fII"/>
+                                            <constraint firstAttribute="bottom" secondItem="Stt-G3-rNn" secondAttribute="bottom" id="uWM-KU-bac"/>
+                                            <constraint firstAttribute="trailing" secondItem="Stt-G3-rNn" secondAttribute="trailing" constant="20" symbolic="YES" id="w61-c0-PdL"/>
+                                        </constraints>
+                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="e3A-eK-Pla">
+                                        <rect key="frame" x="0.0" y="136.5" width="414" height="135.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lvI-qP-cOr">
+                                                <rect key="frame" x="0.0" y="0.0" width="206.5" height="135.5"/>
+                                                <color key="backgroundColor" red="0.24705882352941178" green="0.30588235294117649" blue="0.30980392156862746" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="tintColor" red="0.86274509803921573" green="0.84313725490196079" blue="0.78823529411764703" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="1" subtitle="0 x 1 = 0" titleAlignment="center">
+                                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle0"/>
+                                                    <fontDescription key="subtitleFontDescription" style="UICTFontTextStyleTitle3"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="trainButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bCk-i3-eSa"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qJ2-Ya-fcP">
+                                                <rect key="frame" x="207.5" y="0.0" width="206.5" height="135.5"/>
+                                                <color key="backgroundColor" red="0.24705882352941178" green="0.30588235294117649" blue="0.30980392156862746" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="tintColor" red="0.86274509803921573" green="0.84313725490196079" blue="0.78823529411764703" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="2" subtitle="0 x 2 = 0" titleAlignment="center">
+                                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle0"/>
+                                                    <fontDescription key="subtitleFontDescription" style="UICTFontTextStyleTitle3"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="trainButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ryu-vu-cXi"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="xaj-2B-ph6">
+                                        <rect key="frame" x="0.0" y="273" width="414" height="135.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8tY-bY-moN">
+                                                <rect key="frame" x="0.0" y="0.0" width="206.5" height="135.5"/>
+                                                <color key="backgroundColor" red="0.24705882352941178" green="0.30588235294117649" blue="0.30980392156862746" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="tintColor" red="0.86274509803921573" green="0.84313725490196079" blue="0.78823529411764703" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="3" subtitle="0 x 3 = 0" titleAlignment="center">
+                                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle0"/>
+                                                    <fontDescription key="subtitleFontDescription" style="UICTFontTextStyleTitle3"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="trainButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hJ9-jn-DSj"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KGR-Zb-wXj">
+                                                <rect key="frame" x="207.5" y="0.0" width="206.5" height="135.5"/>
+                                                <color key="backgroundColor" red="0.24705882352941178" green="0.30588235294117649" blue="0.30980392156862746" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="tintColor" red="0.86274509803921573" green="0.84313725490196079" blue="0.78823529411764703" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="4" subtitle="0 x 4 = 0" titleAlignment="center">
+                                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle0"/>
+                                                    <fontDescription key="subtitleFontDescription" style="UICTFontTextStyleTitle3"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="trainButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gAF-Sj-3fe"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="47y-6E-4iI">
+                                        <rect key="frame" x="0.0" y="409.5" width="414" height="135.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l7s-pZ-rqU">
+                                                <rect key="frame" x="0.0" y="0.0" width="206.5" height="135.5"/>
+                                                <color key="backgroundColor" red="0.24705882352941178" green="0.30588235294117649" blue="0.30980392156862746" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="tintColor" red="0.86274509803921573" green="0.84313725490196079" blue="0.78823529411764703" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="5" subtitle="0 x 7 = 0" titleAlignment="center">
+                                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle0"/>
+                                                    <fontDescription key="subtitleFontDescription" style="UICTFontTextStyleTitle3"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="trainButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="voI-bd-p44"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RIR-AA-lci">
+                                                <rect key="frame" x="207.5" y="0.0" width="206.5" height="135.5"/>
+                                                <color key="backgroundColor" red="0.24705882352941178" green="0.30588235294117649" blue="0.30980392156862746" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="tintColor" red="0.86274509803921573" green="0.84313725490196079" blue="0.78823529411764703" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="6" subtitle="0 x 10 = 0" titleAlignment="center">
+                                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle0"/>
+                                                    <fontDescription key="subtitleFontDescription" style="UICTFontTextStyleTitle3"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="trainButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ECe-W0-qJC"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="2E9-9O-CcH">
+                                        <rect key="frame" x="0.0" y="546" width="414" height="135.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qpf-Ic-QaB">
+                                                <rect key="frame" x="0.0" y="0.0" width="206.5" height="135.5"/>
+                                                <color key="backgroundColor" red="0.24705882352941178" green="0.30588235294117649" blue="0.30980392156862746" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="tintColor" red="0.86274509803921573" green="0.84313725490196079" blue="0.78823529411764703" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="7" subtitle="0 x 18 = 0" titleAlignment="center">
+                                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle0"/>
+                                                    <fontDescription key="subtitleFontDescription" style="UICTFontTextStyleTitle3"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="trainButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TOv-D6-77G"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B3s-Qh-CBD">
+                                                <rect key="frame" x="207.5" y="0.0" width="206.5" height="135.5"/>
+                                                <color key="backgroundColor" red="0.24705882352941178" green="0.30588235294117649" blue="0.30980392156862746" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="tintColor" red="0.86274509803921573" green="0.84313725490196079" blue="0.78823529411764703" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="8" subtitle="0 x 21 = 0" titleAlignment="center">
+                                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle0"/>
+                                                    <fontDescription key="subtitleFontDescription" style="UICTFontTextStyleTitle3"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="trainButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zZz-42-CTB"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="4dl-5o-b2A">
+                                        <rect key="frame" x="0.0" y="682.5" width="414" height="135.5"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y1a-2f-oVT">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="67.5"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="WDm-kl-UBQ">
+                                                        <rect key="frame" x="20" y="0.0" width="374" height="67.5"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Train Cars" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jIL-Tc-6Uz">
+                                                                <rect key="frame" x="0.0" y="0.0" width="186.5" height="67.5"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                                                <color key="textColor" systemColor="systemGray2Color"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fZV-IJ-KPc">
+                                                                <rect key="frame" x="187.5" y="0.0" width="186.5" height="67.5"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                                                <color key="textColor" systemColor="systemGray2Color"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="bottom" secondItem="WDm-kl-UBQ" secondAttribute="bottom" id="1K6-ue-Em6"/>
+                                                    <constraint firstAttribute="trailing" secondItem="WDm-kl-UBQ" secondAttribute="trailing" constant="20" symbolic="YES" id="83c-VY-p4w"/>
+                                                    <constraint firstAttribute="top" secondItem="WDm-kl-UBQ" secondAttribute="top" id="Lir-HS-2YY"/>
+                                                    <constraint firstItem="WDm-kl-UBQ" firstAttribute="leading" secondItem="y1a-2f-oVT" secondAttribute="leading" constant="20" symbolic="YES" id="oRc-1o-fd4"/>
+                                                </constraints>
+                                            </view>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zOQ-MX-4Hg">
+                                                <rect key="frame" x="0.0" y="68.5" width="414" height="67"/>
+                                                <color key="backgroundColor" red="0.63529411764705879" green="0.4823529411764706" blue="0.36078431372549019" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="tintColor" red="0.86274509803921573" green="0.84313725490196079" blue="0.78823529411764703" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Clear">
+                                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle0"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="clearButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mN6-7j-1SW"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.17254901960784313" green="0.21176470588235294" blue="0.22352941176470587" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="RpV-Lm-5Uz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="DBS-vn-JF4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="RpV-Lm-5Uz" secondAttribute="bottom" id="PsY-B2-WkO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="RpV-Lm-5Uz" secondAttribute="trailing" id="SE1-OM-5N6"/>
+                            <constraint firstItem="RpV-Lm-5Uz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="SkD-vr-x9I"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="pointsLabel" destination="jJC-Cg-182" id="mwW-iy-yki"/>
+                        <outlet property="trainCarLabel" destination="fZV-IJ-KPc" id="stS-iQ-AdI"/>
+                        <outletCollection property="trainButtonCollection" destination="lvI-qP-cOr" collectionClass="NSMutableArray" id="jxl-hR-cs3"/>
+                        <outletCollection property="trainButtonCollection" destination="qJ2-Ya-fcP" collectionClass="NSMutableArray" id="Rh0-dc-y2r"/>
+                        <outletCollection property="trainButtonCollection" destination="8tY-bY-moN" collectionClass="NSMutableArray" id="fEC-Me-wQI"/>
+                        <outletCollection property="trainButtonCollection" destination="KGR-Zb-wXj" collectionClass="NSMutableArray" id="zw3-3Z-JUw"/>
+                        <outletCollection property="trainButtonCollection" destination="l7s-pZ-rqU" collectionClass="NSMutableArray" id="XEa-km-TAB"/>
+                        <outletCollection property="trainButtonCollection" destination="RIR-AA-lci" collectionClass="NSMutableArray" id="OJf-bH-plS"/>
+                        <outletCollection property="trainButtonCollection" destination="qpf-Ic-QaB" collectionClass="NSMutableArray" id="6EO-Bs-ViM"/>
+                        <outletCollection property="trainButtonCollection" destination="B3s-Qh-CBD" collectionClass="NSMutableArray" id="vEJ-z9-5Qb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
